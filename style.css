@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@keyframes changeWidth{
+    0%{
+       
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+    50%{
+       
+        background-color: rgba(44, 37, 37, 0.205);
+    }
+    100%{
+     
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+    
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'poppins', sans-serif;
+    list-style: none;
+}
+body{
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    background-image: url(./imagens/fundo-white.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.night-mode{
+    background-image: url(./imagens/fundo-black.jpg);
+
+}
+.night-mode #container{
+    background-color: rgba(31, 29, 29, 0.15);
+
+}
+.night-mode #bio{
+    color: white;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 375px;
+    height: 800px;
+    background-color: rgba(233, 232, 232, 0.15);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.616);
+    border-radius:25px;
+    border: 2px solid rgba(255, 246, 246, 0.35);
+    outline: none;
+    backdrop-filter: blur(45px);
+    animation-name: changeWidth;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.perfil{
+    display: flex;
+    width: 270px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.205);
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    box-shadow: rgba(88, 77, 77, 0.493) 1px 1px 20px;
+    outline: none;
+    backdrop-filter: blur(45px);
+    animation-name: changeWidth;
+    animation-duration: 4s;
+}
+.links li{
+    display: inline;
+    padding: 5px
+}
+.foto-perfil img{
+    margin-top: 10px;
+    border-radius: 50%;
+    
+}
+#bio{
+    color: rgb(14, 13, 13);
+    text-shadow: 0px 0px 2px rgb(7, 5, 5);
+    width: 270px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.3rem;
+}
+#bio:hover{
+    cursor:default;
+}
+.custom-mode{
+    gap: 20px;
+    margin-bottom: 10px;
+}
+#toggle{
+    display: none;
+}
+#toggle + label{
+    width: 32px;
+    height: 20px;
+    background-color: rgb(43, 42, 42);
+    display: block;
+    position: relative;
+    border-radius: 25px;
+    padding: 2px;
+    transition: 200ms;
+    cursor: pointer;
+
+}
+#toggle + label:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(236, 234, 234);
+    display: block;
+    border-radius: 50%;
+    right: unset;
+    left: 2px;
+    top: 2px;
+    transition: 200ms;
+    box-shadow: 0px 2px 4px;
+}
+#toggle:checked + label  {
+    background: rgb(221, 217, 217);
+
+}
+#toggle:checked + label:before{
+    content: '';
+    left: calc(100% - 22px);
+    box-shadow: 0 2px 4px rgb(41, 38, 38);
+}
+.darkBackground{
+    background-image: url(/serie008/imagens/fundo-black.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
