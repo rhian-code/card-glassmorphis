@@ -21,7 +21,6 @@
     list-style: none;
 }
 body{
-    height: 100vh;
     background: rgb(255, 255, 255);
     background-image: url(./imagens/fundo-white.jpg);
     background-repeat: no-repeat;
